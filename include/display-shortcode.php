@@ -24,8 +24,8 @@ function RCTE_testimonials_list( $atts, $content ) {
 
 	        if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
 
-					$out .= '<h4><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h4>
-	            <p class="testimonial_desc">'.get_the_content().'</p>';
+					$out .= '<div><h4><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h4>
+	            <p class="testimonial_desc">'.get_the_content().'</p></div>';
 	            // add here more...
 
 	        if ($i % 2 == 0) $out .= '</li>';
