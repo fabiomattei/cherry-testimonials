@@ -22,11 +22,7 @@ function RCTE_testimonials_list( $atts, $content ) {
 	    while ($posts->have_posts()) {
 	        $posts->the_post();
 
-//					$out .= '
-//    <a href="#slide1"><img src="assets/img/slippry-01.jpg" alt="Welcome to Slippry!"></a>
-//  			';
-
-	        if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2).'">';
+	        if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
 
 					$out .= '<h4><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h4>
 	            <p class="testimonial_desc">'.get_the_content().'</p>';
@@ -45,6 +41,9 @@ function RCTE_testimonials_list( $atts, $content ) {
 	*/
 
 		} // end while loop
+
+		// in case I have an odd number of items, I need to close li
+		if ( substr($dynamicstring, -5) != '</li>' )  $out .= '</li>';
 
 		$out .= '</ul>
 		<script type="text/javascript">
