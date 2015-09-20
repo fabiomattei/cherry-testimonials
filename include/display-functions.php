@@ -13,9 +13,9 @@ function RCTE_ShortCodeDetect() {
     foreach ($Posts as $Post) {
 		if ( strpos($Post->post_content, 'RCTEList' ) ) {
 			// loading js scripts
-			wp_enqueue_script('rcte-slippry-javascript', RCSL_PLUGIN_URL.'lib/slippry/slippry.min.js', array('jquery'), '', true);
+			wp_enqueue_script('rcte-slippry-javascript', RCTE_PLUGIN_URL.'lib/slippry/slippry.min.js', array('jquery'), '', true);
 			// loading css scripts
-			wp_enqueue_style('rcte-slippry-css', RCSL_PLUGIN_URL.'lib/slippry/slippry.css');
+			wp_enqueue_style('rcte-slippry-css', RCTE_PLUGIN_URL.'lib/slippry/slippry.css');
 
             break;
         } //end of if
