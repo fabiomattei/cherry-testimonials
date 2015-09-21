@@ -12,6 +12,8 @@ function RCTE_testimonials_list( $atts, $content ) {
 			);
 
 	$posts = new WP_Query( $atts );
+	$out = '<div class="testimonials-container">
+				<h4>Testimonials</h4>';
 	$out = '<ul id="testimonalis-container">';
 
     ob_start();
@@ -24,9 +26,11 @@ function RCTE_testimonials_list( $atts, $content ) {
 
 	        if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
 
-					$out .= '<div><h4><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h4>
-	            <p class="testimonial_desc">'.get_the_content().'</p></div>';
-	            // add here more...
+			$out .= '<div>
+						<div><h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5></div>
+				<div class="testimonial-thumbnail">'.get_the_post_thumbnail().'</div>
+	            <div class="testimonial_desc">'.get_the_content().'</div>
+				</div>';
 
 	        if ($i % 2 == 0) $out .= '</li>';
 
@@ -46,6 +50,7 @@ function RCTE_testimonials_list( $atts, $content ) {
 		if ( substr($dynamicstring, -5) != '</li>' )  $out .= '</li>';
 
 		$out .= '</ul>
+			</div> <!-- .testimonials-container -->
 		<script type="text/javascript">
 jQuery( document ).ready(function( jQuery ) {
 	jQuery(\'#testimonalis-container\').slippry({
@@ -65,4 +70,4 @@ jQuery( document ).ready(function( jQuery ) {
 add_shortcode( 'RCTEList', 'RCTE_testimonials_list' );
 
 
-// usage [RCEVList]
+// usage [RCTEList]
