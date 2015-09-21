@@ -32,6 +32,8 @@ define( 'RCTE_SETTINGS_KEY', 'RCTE_Gallery_Settings_');
 * Includes
 ********************************************/
 
+add_image_size( 'testimonial-img', 220, 220, true );
+
 if ( is_admin() ) {
 	// include admin side
 	include( 'include/installer.php' );

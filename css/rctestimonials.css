@@ -1,4 +1,25 @@
 
+ul#testimonalis-container li {
+	align: center;
+}
+
+.testimonial-box {
+	display: box;
+	max-width: 50%;
+	float: left;
+}
+
 .testimonial-thumbnail {
-	border-radius: 50px;
+	max-width: 30%;
+	float: left;
+
+}
+
+.testimonial-desc {
+	max-width: 70%;
+	float: left;
+}
+
+.testimonal-thumb {
+	border-radius: 50%;
 }

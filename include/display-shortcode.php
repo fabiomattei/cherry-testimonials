@@ -26,11 +26,13 @@ function RCTE_testimonials_list( $atts, $content ) {
 
 	        if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
 
-			$out .= '<div>
-						<div><h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5></div>
-				<div class="testimonial-thumbnail">'.get_the_post_thumbnail().'</div>
-	            <div class="testimonial_desc">'.get_the_content().'</div>
-				</div>';
+			$out .= '<div class="testimonial-box">
+				<div class="testimonial-thumbnail">'.get_the_post_thumbnail( $post_id, 'testimonial-img', array( 'class' => 'testimonal-thumb' ) ).'</div>
+	            <div class="testimonial-desc">
+					<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
+				<p>'.get_the_content().'</p>
+				</div>
+				</div> <!-- .testimonial-box -->';
 
 	        if ($i % 2 == 0) $out .= '</li>';
 
