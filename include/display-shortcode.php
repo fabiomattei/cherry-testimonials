@@ -14,7 +14,7 @@ function RCTE_testimonials_list( $atts, $content ) {
 	$posts = new WP_Query( $atts );
 	$out = '<div class="testimonials-container">
 				<h4>Testimonials</h4>';
-	$out = '<ul id="testimonalis-container">';
+	$out .= '<ul id="testimonalis-container">';
 
     ob_start();
 
