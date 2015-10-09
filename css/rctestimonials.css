@@ -5,7 +5,8 @@ ul#testimonalis-container li {
 
 .testimonial-box {
 	display: box;
-	max-width: 50%;
+	max-width: 40%;
+	margin-left: 10%;
 	float: left;
 }
 

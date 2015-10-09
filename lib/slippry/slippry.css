@@ -324,12 +324,17 @@
     -webkit-border-radius: 50%;
     border-radius: 50%; }
     .sy-pager li.sy-active a {
-      background-color: #e24b70; }
+      background-color: #D0CAB5; 
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+	  border: 1px solid #8c8451;
+	}
     .sy-pager li a {
       width: 100%;
       height: 100%;
       display: block;
-      background-color: #ccc;
+      background-color: #fff7d8;
       text-indent: -9999px;
       -moz-background-size: 2em;
       -o-background-size: 2em;
@@ -337,7 +342,9 @@
       background-size: 2em;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+	  border: 1px solid #8c8451;
+		}
       .sy-pager li a:link, .sy-pager li a:visited {
         opacity: 1.0; }
       .sy-pager li a:hover, .sy-pager li a:focus {
