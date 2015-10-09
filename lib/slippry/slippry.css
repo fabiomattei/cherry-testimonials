@@ -227,8 +227,13 @@
       height: 100%;
       display: block;
       text-indent: -9999px; }
+	  .sy-controls li a {
+		  font-size: 25px;
+	  }
       .sy-controls li a:link, .sy-controls li a:visited {
-        opacity: 0.4; }
+		  opacity: 1;
+		  background-color: transparent !important;
+	  }
       .sy-controls li a:hover, .sy-controls li a:focus {
         opacity: 0.8;
         outline: none; }
@@ -246,7 +251,7 @@
         color: #111;
         font-weight: 800;
         position: absolute;
-        background-color: #fff;
+        /*background-color: #000;*/
         width: 2.8em;
         height: 2.8em;
         left: 50%;
