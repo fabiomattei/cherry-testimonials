@@ -3,7 +3,7 @@
 /**
  * This function handle the short code
  */
-function RCTE_testimonials_list( $atts, $content ) {
+function RCTE_doubleslider( $atts, $content ) {
 	global $post;
 
 	$atts = array( // a few default values
@@ -12,9 +12,9 @@ function RCTE_testimonials_list( $atts, $content ) {
 			);
 
 	$posts = new WP_Query( $atts );
-	$out = '<div class="testimonials-container">
-				<div class="testimonials-titlewrapper">
-					<h4 class="testimonials-title">Testimonials</h4>
+	$out = '<div class="doubleslider-container">
+				<div class="doubleslider-titlewrapper">
+					<h4 class="doubleslider-title">Testimonials</h4>
 				</div>';
 	$out .= '<ul id="testimonalis-container">';
 
@@ -28,13 +28,13 @@ function RCTE_testimonials_list( $atts, $content ) {
 
 	        if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
 
-			$out .= '<div class="testimonial-box">
-				<div class="testimonial-thumbnail">'.get_the_post_thumbnail( $post_id, 'testimonial-img', array( 'class' => 'testimonal-thumb' ) ).'</div>
-	            <div class="testimonial-desc">
+			$out .= '<div class="doubleslider-box">
+				<div class="doubleslider-thumbnail">'.get_the_post_thumbnail( $post_id, 'testimonial-img', array( 'class' => 'testimonal-thumb' ) ).'</div>
+	            <div class="doubleslider-desc">
 					<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
 				<p>'.get_the_content().'</p>
 				</div>
-				</div> <!-- .testimonial-box -->';
+				</div> <!-- .doubleslider-box -->';
 
 	        if ($i % 2 == 0) $out .= '</li>';
 
@@ -71,7 +71,4 @@ jQuery( document ).ready(function( jQuery ) {
 
     return ob_get_clean();
 }
-add_shortcode( 'RCTEList', 'RCTE_testimonials_list' );
-
-
-// usage [RCTEList]
+add_shortcode( 'RCTEDoubleSlider', 'RCTE_doubleslider' );

@@ -1,26 +1,38 @@
 
-ul#testimonalis-container li {
+.doubleslider-titlewrapper {
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+.doubleslider-title {
+    display: inline;
+    text-align: center;
+    padding: 12px 30px;
+}
+
+ul#doubleslider-container li {
 	align: center;
 }
 
-.testimonial-box {
+.doubleslider-box {
 	display: box;
 	max-width: 40%;
 	margin-left: 10%;
 	float: left;
 }
 
-.testimonial-thumbnail {
+.doubleslider-thumbnail {
 	max-width: 30%;
 	float: left;
 
 }
 
-.testimonial-desc {
+.doubleslider-desc {
 	max-width: 70%;
 	float: left;
 }
 
-.testimonal-thumb {
+.doubleslider-thumb {
 	border-radius: 50%;
 }
+
