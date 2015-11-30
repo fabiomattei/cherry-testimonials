@@ -15,6 +15,11 @@ function RCTE_ShortCodeDetect() {
 			// loading css scripts
 			wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'css/rctestimonials.css');
 
+            wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'slick/slick.css');
+            wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'slick/slick-theme.css');
+
+            wp_enqueue_script('rcte-slick', RCSL_PLUGIN_URL.'lib/slick/slick.min.js', array('jquery'), '', true);
+
             break;
         } //end of if
     } //end of foreach

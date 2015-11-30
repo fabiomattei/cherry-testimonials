@@ -4,6 +4,7 @@
  * This function handle the short code
  */
 function RCTE_doubleslider( $atts, $content ) {
+
 	global $post;
 
 	$atts = array( // a few default values
@@ -44,7 +45,7 @@ function RCTE_doubleslider( $atts, $content ) {
 			    <div class="doubleslider-desc">
 					<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
 				<p>'.get_the_content().'</p>
-				</div>
+				</div> <!-- .doubleslider-desc -->
 				</div> <!-- .doubleslider-box -->';				
 			
 			// even numbers I close a <li>
@@ -68,7 +69,7 @@ function RCTE_doubleslider( $atts, $content ) {
 			$out .= '<label for="img-'.$j.'" class="nav-dot" id="img-dot-'.$j.'"></label>';		
 		}
 		$out .= '</li>';
-	    $out .= '</ul>';
+	    $out .= '</ul> <!-- .slides -->';
 		$out .= '</div> <!-- .doubleslider-container -->';
 
 	} else {
