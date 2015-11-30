@@ -1,6 +1,6 @@
 
-$(document).ready( function(){
-    $('.your-class').slick({
-        settingname: settingvalue,
+jQuery(document).ready( function(){
+    jQuery('.doubleslider-slides').slick({
+        autoplay: true,
     });
 });

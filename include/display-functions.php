@@ -18,7 +18,8 @@ function RCTE_ShortCodeDetect() {
             wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'slick/slick.css');
             wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'slick/slick-theme.css');
 
-            wp_enqueue_script('rcte-slick', RCSL_PLUGIN_URL.'lib/slick/slick.min.js', array('jquery'), '', true);
+            wp_enqueue_script('rcte-slick-lib', RCTE_PLUGIN_URL.'lib/slick/slick.min.js', array('jquery'), '', true);
+            wp_enqueue_script('rcte-slick-init', RCTE_PLUGIN_URL.'js/slick-init.js', '', '', true);
 
             break;
         } //end of if
