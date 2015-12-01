@@ -18,7 +18,7 @@ function RCTE_doubleslider( $atts, $content ) {
 				<div class="doubleslider-titlewrapper">
 					<h4 class="doubleslider-title">Testimonials</h4>
 				</div>';
-	$out .= '<ul class="slides">';
+	$out .= '<ul id="doubleslider-slides">';
 
     ob_start();
 
@@ -52,7 +52,14 @@ function RCTE_doubleslider( $atts, $content ) {
 		if ( substr( $out, -5 ) != '</li>' ) $out .= '</li>';
 		
 	    $out .= '</ul> <!-- .slides -->';
-		$out .= '</div> <!-- .doubleslider-container -->';
+		$out .= '</div> <!-- .doubleslider-container -->
+		<script type="text/javascript">
+jQuery( document ).ready(function( jQuery ) {
+	jQuery(\'#doubleslider-slides\').slippry({
+		adaptiveHeight: true,
+	});
+});
+</script>';
 
 	} else {
 		return; // no posts found
