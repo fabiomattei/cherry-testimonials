@@ -33,10 +33,10 @@ function RCTE_doubleslider( $atts, $content ) {
 			if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
    					 		
 			/* slide content */
-			$out .= '<div class="doubleslider-box">
+			$out .= '<div class="doubleslider-box-negative">
 				<div class="doubleslider-thumbnail">'.get_the_post_thumbnail( $post_id, 'doubleslider-img', array( 'class' => 'doubleslider-thumb' ) ).'</div>
 			    <div class="doubleslider-desc">
-					<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
+					<h6><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h6>
 				<p>'.get_the_content().'</p>
 				</div> <!-- .doubleslider-desc -->
 				</div> <!-- .doubleslider-box -->';		
