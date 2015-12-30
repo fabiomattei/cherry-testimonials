@@ -35,7 +35,7 @@ function RCTE_doubleslider( $atts, $content ) {
 			/* slide content */
 			$out .= '<div class="doubleslider-box-negative">
 				<div class="doubleslider-thumbnail">
-					'.get_the_post_thumbnail( $post_id, 'doubleslider-img', array( 'class' => 'doubleslider-thumb' ) ).'
+					'.get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'doubleslider-thumb' ) ).'
 					</div> <!-- .doubleslider-thumbnail -->
 			    <div class="doubleslider-desc">
 					<h6><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h6>

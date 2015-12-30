@@ -14,24 +14,3 @@ ul#doubleslider-container li {
 	align: center;
 }
 
-.doubleslider-box {
-	display: box;
-	max-width: 40%;
-	margin-left: 10%;
-	float: left;
-}
-
-.doubleslider-thumbnail {
-	max-width: 30%;
-	float: left;
-
-}
-
-.doubleslider-desc {
-	max-width: 70%;
-	float: left;
-}
-
-.doubleslider-thumb {
-	border-radius: 50%;
-}
