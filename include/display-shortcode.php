@@ -14,23 +14,49 @@ function RCTE_doubleslider( $atts, $content ) {
 
 	$posts = new WP_Query( $atts );
 
-	$out = '<div class="doubleslider-container">
-				<div class="doubleslider-titlewrapper">
-					<h4 class="doubleslider-title">Testimonials</h4>
+	$out = '<div class="">
+				<div class="">
+					<h4 class="">Testimonials</h4>
 				</div>';
-	$out .= '<ul id="doubleslider-slides">';
+    $out .= '<div id="owl-demo" class="owl-carousel owl-theme">
+          
+  <div class="item"><h1>1</h1></div>
+  <div class="item"><h1>2</h1></div>
+  <div class="item"><h1>3</h1></div>
+  <div class="item"><h1>4</h1></div>
+  <div class="item"><h1>5</h1></div>
+  <div class="item"><h1>6</h1></div>
+  <div class="item"><h1>7</h1></div>
+  <div class="item"><h1>8</h1></div>
+  <div class="item"><h1>9</h1></div>
+  <div class="item"><h1>10</h1></div>
+  <div class="item"><h1>11</h1></div>
+  <div class="item"><h1>12</h1></div>
+ 
+</div>
+<style>
+#owl-demo .item{
+  background: #42bdc2;
+  padding: 30px 0px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+</style>
+';
+	$out .= '<div id="owl-demo" class="owl-demo">';
 
     ob_start();
 
-	$i = 1;
-	$printed = 0;
 	if ($posts->have_posts()) {
 
 	    while ($posts->have_posts()) {
 	        $posts->the_post();
-			
-			// opening li
-			if ($i % 2 == 1) $out .= '<li id="#slide'.($i / 2 + 0.5).'">';
+
+			$out .= '<div class="item">';
    					 		
 			/* slide content */
 			$out .= '<div class="doubleslider-box-negative">
@@ -43,23 +69,19 @@ function RCTE_doubleslider( $atts, $content ) {
 				</div> <!-- .doubleslider-desc -->
 				</div> <!-- .doubleslider-box -->';		
 				
-			// closing li
-			if ($i % 2 == 0) $out .= '</li>';		
-
-			$i++;
+			$out .= '</div>';
 
 		} // end while loop
 
-		// if li has been not closed I close it
-		if ( substr( $out, -5 ) != '</li>' ) $out .= '</li>';
-		
-	    $out .= '</ul> <!-- .slides -->';
+	    $out .= '</div> <!-- .slides -->';
 		$out .= '</div> <!-- .doubleslider-container -->
 		<script type="text/javascript">
-jQuery( document ).ready(function( jQuery ) {
-	jQuery(\'#doubleslider-slides\').slippry({
-		adaptiveHeight: true,
-	});
+jQuery(document).ready(function() {
+ 
+  jQuery("#owl-demo").owlCarousel({
+    navigation : true
+  });
+ 
 });
 </script>';
 

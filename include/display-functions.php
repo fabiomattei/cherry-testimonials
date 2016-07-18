@@ -9,16 +9,18 @@
 function RCTE_ShortCodeDetect() {
     global $wp_query;
     $Posts = $wp_query->posts;
-    $Pattern = get_shortcode_regex();
     foreach ($Posts as $Post) {
 		if ( strpos($Post->post_content, 'RCTEDoubleSlider' ) ) {
 			// loading css scripts
-			wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'css/rctestimonials.css');
+			//wp_enqueue_style('rcte-testimonialscss', RCTE_PLUGIN_URL.'css/rctestimonials.css');
 
-			// loading slippry js scripts
-			wp_enqueue_script('rcte-slippry-javascript', RCTE_PLUGIN_URL.'lib/slippry/slippry.min.js', array('jquery'), '', true);
-			// loading slippry css scripts
-			wp_enqueue_style('rcte-slippry-css', RCTE_PLUGIN_URL.'lib/slippry/slippry.css');
+			// loading owl.carousel js scripts
+			wp_enqueue_script('rcte-carousel-javascript', RCTE_PLUGIN_URL.'vendors/owlcarousel/owl.carousel.min.js', array('jquery'), '', true);
+
+            // loading owl.carousel css scripts
+			wp_enqueue_style('rcte-carousel-css', RCTE_PLUGIN_URL.'vendors/owlcarousel/owl.carousel.css');
+            wp_enqueue_style('rcte-carousel-theme-css', RCTE_PLUGIN_URL.'vendors/owlcarousel/owl.theme.css');
+            wp_enqueue_style('rcte-carousel-transitions-css', RCTE_PLUGIN_URL.'vendors/owlcarousel/owl.transitions.css');
 
             break;
         } //end of if
