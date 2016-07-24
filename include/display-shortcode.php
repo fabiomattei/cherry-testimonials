@@ -21,7 +21,7 @@ function RCTE_doubleslider( $atts, $content ) {
 					<h4 class="">Testimonials</h4>
 				</div>';
 
-	$out .= '<div id="owl-demo" class="owl-demo">';
+	$out .= '<div id="owlcarousel-testimonials">';
 
 	if ($posts->have_posts()) {
 
@@ -49,28 +49,13 @@ function RCTE_doubleslider( $atts, $content ) {
 		$out .= '</div> <!-- .doubleslider-container -->
 		<script type="text/javascript">
 jQuery(document).ready(function() {
-  jQuery("#owl-demo").owlCarousel({
-        items: 3,
-        margin: 30,
+  jQuery("#owlcarousel-testimonials").owlCarousel({
+        margin: 10,
         nav: true,
-        navText: [\'<i class="fa fa-chevron-left"></i>\', \'<i class="fa fa-chevron-right"></i>\'],
-        responsive: {
-            0: {
-                items: 1
-            },
-            540: {
-                items: 1
-            },  
-            766: {
-                items: 1
-            },
-            990: {
-                items: 2
-            },
-            1200: {
-                items: 2
-            }           
-        }
+	    itemsDesktop : [1200,3],
+	    itemsDesktopSmall : [990,2],
+	    itemsTablet: [766,2],
+	    itemsMobile : [540,1],
      });
 });
 </script>';
