@@ -14,42 +14,14 @@ function RCTE_doubleslider( $atts, $content ) {
 
 	$posts = new WP_Query( $atts );
 
+    ob_start();
+
 	$out = '<div class="">
 				<div class="">
 					<h4 class="">Testimonials</h4>
 				</div>';
-    $out .= '<div id="owl-demo" class="owl-carousel owl-theme">
-          
-  <div class="item"><h1>1</h1></div>
-  <div class="item"><h1>2</h1></div>
-  <div class="item"><h1>3</h1></div>
-  <div class="item"><h1>4</h1></div>
-  <div class="item"><h1>5</h1></div>
-  <div class="item"><h1>6</h1></div>
-  <div class="item"><h1>7</h1></div>
-  <div class="item"><h1>8</h1></div>
-  <div class="item"><h1>9</h1></div>
-  <div class="item"><h1>10</h1></div>
-  <div class="item"><h1>11</h1></div>
-  <div class="item"><h1>12</h1></div>
- 
-</div>
-<style>
-#owl-demo .item{
-  background: #42bdc2;
-  padding: 30px 0px;
-  margin: 10px;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-}
-</style>
-';
-	$out .= '<div id="owl-demo" class="owl-demo">';
 
-    ob_start();
+	$out .= '<div id="owl-demo" class="owl-demo">';
 
 	if ($posts->have_posts()) {
 
@@ -77,11 +49,29 @@ function RCTE_doubleslider( $atts, $content ) {
 		$out .= '</div> <!-- .doubleslider-container -->
 		<script type="text/javascript">
 jQuery(document).ready(function() {
- 
   jQuery("#owl-demo").owlCarousel({
-    navigation : true
-  });
- 
+        items: 3,
+        margin: 30,
+        nav: true,
+        navText: [\'<i class="fa fa-chevron-left"></i>\', \'<i class="fa fa-chevron-right"></i>\'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            540: {
+                items: 1
+            },  
+            766: {
+                items: 1
+            },
+            990: {
+                items: 2
+            },
+            1200: {
+                items: 2
+            }           
+        }
+     });
 });
 </script>';
 
