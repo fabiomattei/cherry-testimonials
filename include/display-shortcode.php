@@ -16,7 +16,7 @@ function RCTE_doubleslider( $atts, $content ) {
 
     ob_start();
 
-	$out = '<div class="">
+	$out = '<div id="owlcarousel-testimonials-outer">
 				<div class="">
 					<h4 class="">Testimonials</h4>
 				</div>';
@@ -52,7 +52,7 @@ jQuery(document).ready(function() {
   jQuery("#owlcarousel-testimonials").owlCarousel({
         margin: 10,
         nav: true,
-	    itemsDesktop : [1200,3],
+	    itemsDesktop : [1200,2],
 	    itemsDesktopSmall : [990,2],
 	    itemsTablet: [766,2],
 	    itemsMobile : [540,1],
