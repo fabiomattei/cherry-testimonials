@@ -28,7 +28,7 @@ function RCTE_doubleslider( $atts, $content ) {
 	    while ($posts->have_posts()) {
 	        $posts->the_post();
 
-			$out .= '<div class="item">';
+			$out .= '<div class="testmonial-item">';
    					 		
 			/* slide content */
 			$out .= '<div class="doubleslider-box-negative">
