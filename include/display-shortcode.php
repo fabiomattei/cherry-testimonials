@@ -50,9 +50,10 @@ function RCTE_doubleslider( $atts, $content ) {
 		<script type="text/javascript">
 jQuery(document).ready(function() {
   jQuery("#owlcarousel-testimonials").owlCarousel({
+  		items: 2, /* maximum amount of items displayed at a time with the widest browser width */
         margin: 10,
         nav: true,
-	    itemsDesktop : [1200,2],
+	    itemsDesktop : [1199,2],
 	    itemsDesktopSmall : [990,2],
 	    itemsTablet: [766,2],
 	    itemsMobile : [540,1],
