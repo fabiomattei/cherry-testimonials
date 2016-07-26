@@ -17,8 +17,8 @@ function RCTE_doubleslider( $atts, $content ) {
     ob_start();
 
 	$out = '<div id="owlcarousel-testimonials-outer">
-				<div class="">
-					<h4 class="">Testimonials</h4>
+				<div class="doubleslider-titlewrapper">
+					<h4 class="doubleslider-title">Testimonials</h4>
 				</div>';
 
 	$out .= '<div id="owlcarousel-testimonials">';
